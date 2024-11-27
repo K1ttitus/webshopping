@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .logout-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logout-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .logout-container p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+        .logout-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .logout-container .confirm {
+            background-color: #d9534f;
+            color: white;
+            margin-right: 10px;
+        }
+        .logout-container .cancel {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>คุณต้องการออกจากระบบหรือไม่?</h1>
+        <p>หากคุณออกจากระบบ คุณจะต้องเข้าสู่ระบบอีกครั้งเพื่อใช้งาน</p>
+        <button class="confirm" id="confirmLogout">ยืนยัน</button>
+        <button class="cancel" id="cancelLogout">ยกเลิก</button>
+    </div>
+
+    <script>
+        // ยืนยันการ Logout
+        document.getElementById('confirmLogout').addEventListener('click', () => {
+            // ลบข้อมูลที่เกี่ยวข้องกับการเข้าสู่ระบบ
+            localStorage.removeItem('authToken'); // ตัวอย่างลบ token
+            localStorage.removeItem('cart'); // ลบข้อมูลตะกร้าสินค้า
+            sessionStorage.clear(); // ลบข้อมูลใน sessionStorage
+
+            // เปลี่ยนเส้นทางไปยังหน้า Login
+            window.location.href = '/logout.html';
+        });
+
+        // ยกเลิกการ Logout และกลับไปยังหน้าหลัก
+        document.getElementById('cancelLogout').addEventListener('click', () => {
+            window.location.href = 'shop.html'; // กลับไปหน้าแรก
+        });
+
+        
+    </script>
+</body>
+</html>

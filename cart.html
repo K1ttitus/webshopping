@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Fresh Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Fresh Market</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="shop.html" >Shop</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>รถเข็นสินค้า</h2>
+        <div id="cart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>สินค้า</th>
+                        <th>ราคา</th>
+                        <th>จำนวน</th>
+                        <th>รวม</th>
+                        <th>ลบ</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    <!-- รายการสินค้าจะแสดงที่นี่ -->
+                </tbody>
+            </table>
+            <div class="cart-total">
+                <h3>ยอดรวมทั้งหมด: <span id="totalPrice">0</span> บาท</h3>
+            </div>
+            <button id="checkoutButton">ชำระเงิน</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Fresh Market</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

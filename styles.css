@@ -1,0 +1,391 @@
+/* ตัวกำหนดทั่วไป */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5ef;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px; /* ขนาดโลโก้ */
+    height: auto;
+    margin-right: 10px; /* ระยะห่างระหว่างโลโก้กับข้อความ */
+}
+
+.logo-text {
+    font-family: 'Cursive', sans-serif;
+    color: #5c3d2e;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* เมนูนำทาง */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5c3d2e;
+    font-size: 16px;
+}
+
+/* ส่วน Icons (ค้นหาและตะกร้า) */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.icons .icon {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* ส่วนหลัก */
+main {
+    padding: 20px;
+}
+
+/* สินค้า */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px); /* เพิ่มการยกตัวเมื่อ hover */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #5c3d2e; /* เปลี่ยนขอบให้เป็นสีน้ำตาล */
+    background-color: #5c3d2e; /* พื้นหลังเป็นสีน้ำตาล */
+    color: #fff; /* สีตัวอักษรขาว */
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.quantity button:hover {
+    background-color: #e24e4e; /* เปลี่ยนเป็นสีแดงเมื่อ hover */
+    color: #fff; /* คงสีตัวอักษรขาวเมื่อ hover */
+}
+
+.quantity input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+    border-radius: 4px;
+}
+
+/* ปุ่มเพิ่มลงในตะกร้า */
+.add-to-cart {
+    background-color: #5c3d2e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #e24e4e;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ปรับความสวยงามเมื่อ hover */
+nav ul li a:hover {
+    color: #e24e4e;
+}
+
+.icon {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.2); /* ขยายขนาดเมื่อวางเมาส์ */
+    color: #e24e4e; /* เปลี่ยนสีไอคอน (ถ้าต้องการ) */
+}
+
+/* Modal Style */
+.modal {
+    display: none; /* ซ่อน Modal โดยเริ่มต้น */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* ฉากหลังโปร่ง */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.modal-content h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ตารางรถเข็น */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+.cart-total {
+    text-align: right;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button#checkoutButton {
+    float: right;
+}
+.login-btn {
+    padding: 8px 15px;
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #45a049; /* สีเมื่อวางเมาส์ */
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5c3d2e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Modal */
+.popup {
+    display: none; /* ซ่อน modal โดยเริ่มต้น */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* ให้ modal แสดงขึ้นเมื่อมีการคลิก */
+.hidden {
+    display: none;
+}
+
+/* เพิ่ม Media Query สำหรับอุปกรณ์มือถือ */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* เปลี่ยนจำนวนคอลัมน์ในมือถือ */
+    }
+
+    .product {
+        padding: 10px;
+    }
+
+    .quantity button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .quantity input {
+        width: 40px;
+    }
+
+    .add-to-cart {
+        padding: 8px 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}
+

@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #5a3921;
+    background-color: #fffaf3;
+}
+
+/* ส่วน Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fdf7f0;
+    border-bottom: 2px solid #f0e6d8;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: #805508;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5a3921;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #805508;
+}
+
+.icons i {
+    font-size: 1.2rem;
+    color: #805508;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.content {
+    width: 1200;
+    height: 100vh;
+    margin: auto;
+    background-color: antiquewhite;
+    text-align: left;
+    color: #5a3921;
+    position: relative;
+    padding: 20px;
+}
+.content par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2;
+    line-height: 30px;
+}
+.content h1 {
+    font-family: 'Times New Roman';
+    font-size: 60px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #5a3921;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+    
+.market {
+    background-image: url('market.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.market par {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.market h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.market .cn {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.shop-now-btn {
+    background-color: #805508;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: #5a3921;
+}
+
+.fresh-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.market {
+    background-image: url('market.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.features-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: #fffaf3;
+    position: relative;
+}
+
+.features-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Central Image */
+.center-image {
+    position: relative;
+    z-index: 10;
+    margin: 20px;
+}
+
+.center-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #e6d8c2;
+}
+
+/* Feature Boxes */
+.feature-box {
+    position: absolute;
+    width: 220px;
+    background-color: #fdf7f0;
+    border: 2px solid #e6d8c2;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Positioning Feature Boxes */
+.feature-box.top-center {
+    top: -80px;
+    left: 10%;
+}
+
+.feature-box.middle-left {
+    top: -80px;
+    right: 10%;
+}
+
+.feature-box.middle-right {
+    bottom: -80px;
+    left: 10%;
+}
+
+.feature-box.bottom-center {
+    bottom: -80px;
+    right: 10%;
+}
+
+/* Feature Box Text */
+.feature-box h3 {
+    font-size: 1.2rem;
+    color: #805508;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #5a3921;
+}
+.login-btn {
+    padding: 8px 10px;
+    background-color: #fffaf3; /* สีเขียวสด */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.login-btn:hover {
+    background-color: #f0e6d8; /* สีเมื่อวางเมาส์ */
+}
